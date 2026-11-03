@@ -1,0 +1,176 @@
+.section {
+  @include m.section-padding;
+  background-color: v.$color-white;
+}
+
+.inner {
+  @include m.container;
+}
+
+.head {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 14px;
+  color: v.$color-dark;
+}
+
+.text {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  color: v.$color-text;
+}
+
+.layout {
+  display: grid;
+  gap: 26px;
+
+  @include m.from-lg {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+    gap: 32px;
+  }
+}
+
+.formCol {
+  min-width: 0;
+}
+
+.infoCol {
+  padding: 30px 28px;
+  border-radius: v.$radius-xl;
+  background-color: v.$color-peach-light;
+  border: 1px solid v.$color-border;
+}
+
+.infoTitle {
+  margin: 0 0 22px;
+  font-size: 1.2rem;
+  color: v.$color-dark;
+}
+
+.contacts {
+  display: grid;
+  gap: 18px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+
+.contactIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background-color: v.$color-white;
+  color: v.$color-primary-dark;
+  box-shadow: v.$shadow-sm;
+}
+
+.contactBody {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: v.$color-muted;
+}
+
+.contactValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: v.$color-dark;
+  font-style: normal;
+  word-break: break-word;
+}
+
+a.contactValue:hover {
+  color: v.$color-primary-dark;
+}
+
+.requisites {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 18px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+}
+
+.requisiteRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+  margin: 0;
+  font-size: 0.92rem;
+
+  span {
+    color: v.$color-muted;
+  }
+
+  strong {
+    color: v.$color-dark;
+  }
+}
+
+.docs {
+  padding-top: 22px;
+  border-top: 1px solid v.$color-border;
+}
+
+.docsTitle {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: v.$color-dark;
+}
+
+.docsList {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+  color: v.$color-dark;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+  svg {
+    flex: 0 0 auto;
+    color: v.$color-primary;
+  }
+
+  &:hover {
+    border-color: v.$color-primary;
+    color: v.$color-primary-dark;
+    background-color: v.$color-peach;
+  }
+}

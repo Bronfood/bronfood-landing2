@@ -1,0 +1,128 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  border-radius: v.$radius-pill;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform v.$transition-base,
+    background-color v.$transition-base,
+    border-color v.$transition-base,
+    color v.$transition-base,
+    box-shadow v.$transition-base;
+
+  @include m.focus-ring;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .label {
+    display: inline-block;
+  }
+
+  .icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+// --- Варианты ---
+.primary {
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  box-shadow: 0 10px 24px rgba(255, 138, 0, 0.32);
+
+  &:hover {
+    background-color: v.$color-primary-dark;
+    color: v.$color-white;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(255, 138, 0, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.secondary {
+  background-color: v.$color-white;
+  color: v.$color-dark;
+  border-color: v.$color-primary-soft;
+
+  &:hover {
+    border-color: v.$color-primary;
+    color: v.$color-primary-dark;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.outline {
+  background-color: transparent;
+  color: v.$color-dark;
+  border-color: v.$color-dark;
+
+  &:hover {
+    background-color: v.$color-dark;
+    color: v.$color-white;
+  }
+}
+
+.ghost {
+  background-color: transparent;
+  color: v.$color-primary-dark;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  &:hover {
+    color: v.$color-primary;
+    text-decoration: underline;
+  }
+}
+
+.light {
+  background-color: v.$color-white;
+  color: v.$color-primary-dark;
+
+  &:hover {
+    background-color: v.$color-peach;
+    color: v.$color-primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+// --- Размеры ---
+.sm {
+  padding: 10px 20px;
+  font-size: 0.92rem;
+}
+
+.md {
+  padding: 14px 28px;
+}
+
+.lg {
+  padding: 17px 36px;
+  font-size: 1.05rem;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}

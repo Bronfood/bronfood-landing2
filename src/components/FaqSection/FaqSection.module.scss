@@ -1,0 +1,8 @@
+.section {
+  @include m.section-padding;
+  background-color: v.$color-peach-light;
+}
+
+.inner {
+  @include m.container;
+}

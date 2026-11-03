@@ -1,0 +1,147 @@
+.page {
+  background-color: v.$color-white;
+}
+
+.inner {
+  @include m.container;
+  max-width: 900px;
+  padding-top: 32px;
+  padding-bottom: 72px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 0.86rem;
+  color: v.$color-muted;
+
+  a {
+    color: v.$color-muted;
+
+    &:hover {
+      color: v.$color-primary-dark;
+    }
+  }
+
+  span[aria-current] {
+    color: v.$color-dark;
+    font-weight: 700;
+  }
+}
+
+.header {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 2px solid v.$color-peach;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+  color: v.$color-dark;
+}
+
+.lead {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: v.$color-text;
+}
+
+.edition {
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: v.$color-primary-dark;
+}
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 30px;
+  padding: 16px 18px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-peach-light;
+  border: 1px dashed v.$color-primary-soft;
+  font-size: 0.9rem;
+  color: v.$color-dark-soft;
+
+  svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    color: v.$color-primary;
+  }
+}
+
+.content {
+  display: grid;
+  gap: 32px;
+}
+
+.section {
+  scroll-margin-top: 96px;
+}
+
+.sectionTitle {
+  margin: 0 0 14px;
+  font-size: 1.28rem;
+  color: v.$color-dark;
+}
+
+.paragraph {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: v.$color-text;
+}
+
+.ul,
+.ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.66;
+    color: v.$color-text;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  margin-top: 46px;
+  padding-top: 26px;
+  border-top: 1px solid v.$color-border;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: v.$color-primary-dark;
+
+  svg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    color: v.$color-primary;
+  }
+}
+
+.backLinkSecondary {
+  font-weight: 700;
+  color: v.$color-dark;
+
+  &:hover {
+    color: v.$color-primary-dark;
+  }
+}

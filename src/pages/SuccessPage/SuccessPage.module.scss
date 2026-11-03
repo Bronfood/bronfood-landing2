@@ -1,0 +1,87 @@
+.page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, v.$color-peach-light 0%, v.$color-white 70%);
+}
+
+.inner {
+  @include m.container;
+  max-width: 720px;
+  text-align: center;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 26px;
+  border-radius: 50%;
+  background-color: v.$color-success-bg;
+  color: v.$color-success;
+  box-shadow: v.$shadow-sm;
+}
+
+.title {
+  margin: 0 0 16px;
+  color: v.$color-dark;
+}
+
+.text {
+  margin: 0 0 24px;
+  font-size: 1.06rem;
+  color: v.$color-text;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 auto 28px;
+  padding: 18px 20px;
+  max-width: 620px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-white;
+  border: 1px dashed v.$color-primary-soft;
+  text-align: left;
+
+  svg {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    color: v.$color-primary;
+  }
+}
+
+.noteText {
+  margin: 0;
+  font-size: 0.95rem;
+  color: v.$color-dark-soft;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.help {
+  margin: 0;
+  font-size: 0.95rem;
+  color: v.$color-muted;
+}
+
+.link {
+  color: v.$color-primary-dark;
+  font-weight: 700;
+  text-decoration: underline;
+
+  &:hover {
+    color: v.$color-primary;
+  }
+}

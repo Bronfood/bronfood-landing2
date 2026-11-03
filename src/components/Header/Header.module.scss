@@ -1,0 +1,156 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid v.$color-border;
+}
+
+.inner {
+  @include m.container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+
+  @include m.from-md {
+    min-height: 84px;
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+
+  img {
+    width: 128px;
+    height: auto;
+
+    @include m.from-md {
+      width: 150px;
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  @include m.from-lg {
+    display: block;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: v.$radius-pill;
+  color: v.$color-dark;
+  font-weight: 700;
+  font-size: 0.98rem;
+
+  &:hover {
+    background-color: v.$color-peach;
+    color: v.$color-primary-dark;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta {
+  display: none;
+
+  @include m.from-md {
+    display: inline-flex;
+  }
+}
+
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid v.$color-border;
+  border-radius: v.$radius-sm;
+  background: v.$color-white;
+  color: v.$color-dark;
+
+  @include m.from-lg {
+    display: none;
+  }
+
+  &:hover {
+    border-color: v.$color-primary;
+    color: v.$color-primary-dark;
+  }
+}
+
+.mobileMenu {
+  display: grid;
+  gap: 14px;
+  padding: 18px 20px 26px;
+  border-top: 1px solid v.$color-border;
+  background-color: v.$color-white;
+
+  &[hidden] {
+    display: none;
+  }
+
+  @include m.from-lg {
+    display: none !important;
+  }
+}
+
+.mobileMenuOpen {
+  animation: menuIn 0.18s ease;
+}
+
+.mobileList {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobileLink {
+  display: block;
+  padding: 12px 10px;
+  border-radius: v.$radius-sm;
+  color: v.$color-dark;
+  font-weight: 700;
+  font-size: 1.05rem;
+
+  &:hover {
+    background-color: v.$color-peach;
+    color: v.$color-primary-dark;
+  }
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

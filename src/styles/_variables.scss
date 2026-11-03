@@ -1,0 +1,59 @@
+// =============================================================================
+// Бренд-переменные Bronfood CRM
+// Палитра по ТЗ: оранжевый, светло-персиковый, белый фон, тёмно-коричневый текст.
+// =============================================================================
+
+// Бренд-цвета
+$color-primary: #ff8a00; // основной оранжевый
+$color-primary-dark: #e07200; // оранжевый для hover/active
+$color-primary-soft: #ffd09f; // светло-персиковый акцент
+$color-peach: #fff2e3; // фон секций
+$color-peach-light: #fff8f0; // самый светлый фон
+
+// Текст и поверхности
+$color-dark: #21150f; // тёмно-коричневый (заголовки, футер)
+$color-dark-soft: #3a2a20;
+$color-text: #4a3b31; // основной текст
+$color-muted: #7d6b5e; // вторичный текст
+$color-white: #ffffff;
+$color-border: #f0e2d4;
+$color-surface: #ffffff;
+
+// Статусы
+$color-success: #1f9d55;
+$color-success-bg: #e8f7ee;
+$color-error: #d64545;
+$color-error-bg: #fdecec;
+
+// Радиусы
+$radius-sm: 10px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-xl: 32px;
+$radius-pill: 999px;
+
+// Тени
+$shadow-sm: 0 2px 10px rgba(33, 21, 15, 0.06);
+$shadow-md: 0 14px 34px rgba(33, 21, 15, 0.09);
+$shadow-lg: 0 26px 60px rgba(33, 21, 15, 0.12);
+$shadow-focus: 0 0 0 4px rgba(255, 138, 0, 0.28);
+
+// Сетка
+$container-max: 1180px;
+$container-padding: 20px;
+
+// Отступы секций
+$section-pad-y-mobile: 56px;
+$section-pad-y-desktop: 96px;
+
+// Шрифты
+$font-family-base: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Брейкпоинты
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// Анимации
+$transition-base: 0.2s ease;

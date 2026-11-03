@@ -1,0 +1,6 @@
+# robots.txt для сайта Bronfood CRM
+User-agent: *
+Allow: /
+Disallow: /success
+
+Sitemap: https://bronfood.kz/sitemap.xml

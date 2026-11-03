@@ -1,0 +1,175 @@
+.section {
+  @include m.section-padding;
+  background: linear-gradient(180deg, v.$color-peach-light 0%, v.$color-white 100%);
+}
+
+.inner {
+  @include m.container;
+}
+
+.layout {
+  display: grid;
+  gap: 24px;
+
+  @include m.from-lg {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 28px;
+  }
+}
+
+.card {
+  padding: 32px 28px;
+  border-radius: v.$radius-xl;
+  background-color: v.$color-white;
+  border: 2px solid v.$color-primary;
+  box-shadow: v.$shadow-md;
+}
+
+.cardHead {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.planName {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  color: v.$color-primary-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.priceLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+.price {
+  font-size: clamp(2.4rem, 6vw, 3.2rem);
+  font-weight: 800;
+  color: v.$color-dark;
+  line-height: 1;
+}
+
+.priceUnit {
+  font-size: 1rem;
+  font-weight: 700;
+  color: v.$color-text;
+  max-width: 260px;
+}
+
+.equivalent {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: v.$color-primary-dark;
+}
+
+.cardNote {
+  margin: 0 0 24px;
+  padding: 14px 16px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-peach-light;
+  font-size: 0.94rem;
+  color: v.$color-text;
+}
+
+.listTitle {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  color: v.$color-dark;
+}
+
+.included {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+
+    svg {
+      flex: 0 0 auto;
+      margin-top: 3px;
+      color: v.$color-success;
+    }
+  }
+}
+
+.side {
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  padding: 28px;
+  border-radius: v.$radius-xl;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+  box-shadow: v.$shadow-sm;
+}
+
+.panelTitle {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: v.$color-dark;
+}
+
+.panelText {
+  margin: 0 0 16px;
+  font-size: 0.96rem;
+  color: v.$color-text;
+}
+
+.panelNote {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  color: v.$color-muted;
+}
+
+.docLinks {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-peach-light;
+  border: 1px solid v.$color-border;
+  color: v.$color-dark;
+  font-weight: 700;
+  font-size: 0.94rem;
+
+  svg {
+    color: v.$color-primary;
+    flex: 0 0 auto;
+  }
+
+  &:hover {
+    border-color: v.$color-primary;
+    color: v.$color-primary-dark;
+    background-color: v.$color-peach;
+  }
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 0.84rem;
+  color: v.$color-muted;
+}

@@ -1,0 +1,36 @@
+.section {
+  @include m.section-padding;
+  background: linear-gradient(180deg, v.$color-white 0%, v.$color-peach 100%);
+}
+
+.inner {
+  @include m.container;
+  max-width: 820px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 16px;
+  color: v.$color-dark;
+}
+
+.text {
+  margin: 0 0 28px;
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+  color: v.$color-text;
+}
+
+.note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 0;
+  font-weight: 700;
+  color: v.$color-dark;
+  font-size: 0.95rem;
+
+  svg {
+    color: v.$color-primary;
+    flex: 0 0 auto;
+  }
+}

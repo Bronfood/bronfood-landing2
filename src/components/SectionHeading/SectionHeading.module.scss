@@ -1,0 +1,48 @@
+.heading {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.overline {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 14px;
+  border-radius: v.$radius-pill;
+  background-color: v.$color-peach;
+  color: v.$color-primary-dark;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 14px;
+  color: v.$color-dark;
+}
+
+.text {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  color: v.$color-text;
+}
+
+.left .text {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.center .text {
+  margin-left: auto;
+  margin-right: auto;
+}

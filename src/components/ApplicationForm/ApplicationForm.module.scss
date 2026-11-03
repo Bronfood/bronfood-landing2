@@ -1,0 +1,167 @@
+.form {
+  display: grid;
+  gap: 18px;
+  padding: 30px 26px;
+  border-radius: v.$radius-xl;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+  box-shadow: v.$shadow-md;
+
+  @include m.from-md {
+    padding: 36px 34px;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: v.$color-dark;
+}
+
+.hint {
+  margin: -8px 0 0;
+  font-size: 0.92rem;
+  color: v.$color-muted;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  gap: 18px;
+
+  @include m.from-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.94rem;
+  color: v.$color-dark;
+}
+
+.optional {
+  font-weight: 600;
+  color: v.$color-muted;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: v.$radius-md;
+  border: 1.5px solid v.$color-border;
+  background-color: v.$color-white;
+  color: v.$color-dark;
+  transition:
+    border-color v.$transition-base,
+    box-shadow v.$transition-base;
+
+  &::placeholder {
+    color: #b3a397;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-primary;
+    box-shadow: v.$shadow-focus;
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.inputError {
+  border-color: v.$color-error;
+  background-color: v.$color-error-bg;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: v.$color-error;
+}
+
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  left: -9999px;
+}
+
+.consent {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-peach-light;
+  border: 1px solid v.$color-border;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: v.$color-text;
+  cursor: pointer;
+}
+
+.checkbox {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  accent-color: v.$color-primary;
+  cursor: pointer;
+}
+
+.consentNote {
+  margin: 0;
+  font-size: 0.84rem;
+  color: v.$color-muted;
+}
+
+.inlineLink {
+  color: v.$color-primary-dark;
+  font-weight: 700;
+  text-decoration: underline;
+
+  &:hover {
+    color: v.$color-primary;
+  }
+}
+
+.submitError {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-error-bg;
+  color: v.$color-error;
+  font-weight: 700;
+  font-size: 0.92rem;
+
+  svg {
+    flex: 0 0 auto;
+  }
+}
+
+.legal {
+  margin: 0;
+  font-size: 0.8rem;
+  color: v.$color-muted;
+}

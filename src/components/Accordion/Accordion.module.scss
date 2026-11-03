@@ -1,0 +1,81 @@
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  border-radius: v.$radius-md;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-border;
+  box-shadow: v.$shadow-sm;
+  overflow: hidden;
+  transition: border-color v.$transition-base;
+}
+
+.open {
+  border-color: v.$color-primary-soft;
+}
+
+.questionHeading {
+  margin: 0;
+  font-size: inherit;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  padding: 20px 22px;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.04rem;
+  color: v.$color-dark;
+  cursor: pointer;
+
+  @include m.focus-ring;
+
+  &:hover {
+    color: v.$color-primary-dark;
+  }
+}
+
+.questionText {
+  min-width: 0;
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background-color: v.$color-peach;
+  color: v.$color-primary-dark;
+  transition: transform v.$transition-base;
+}
+
+.open .chevron {
+  transform: rotate(180deg);
+}
+
+.answer {
+  padding: 0 22px 22px;
+}
+
+.answerText {
+  margin: 0;
+  font-size: 0.98rem;
+  color: v.$color-text;
+}

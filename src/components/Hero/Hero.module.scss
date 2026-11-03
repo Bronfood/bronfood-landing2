@@ -1,0 +1,128 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, v.$color-peach-light 0%, v.$color-white 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -140px;
+  right: -160px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 208, 159, 0.7), transparent 68%);
+  pointer-events: none;
+}
+
+.inner {
+  @include m.container;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 40px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+
+  @include m.from-lg {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 56px;
+    padding-top: 76px;
+    padding-bottom: 92px;
+  }
+}
+
+.content {
+  max-width: 620px;
+}
+
+.overline {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 7px 16px;
+  border-radius: v.$radius-pill;
+  background-color: v.$color-white;
+  border: 1px solid v.$color-primary-soft;
+  color: v.$color-primary-dark;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.title {
+  margin: 0 0 20px;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+  color: v.$color-text;
+}
+
+.highlights {
+  display: grid;
+  gap: 12px 24px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+
+  @include m.from-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: v.$color-dark-soft;
+
+    svg {
+      flex: 0 0 auto;
+      margin-top: 3px;
+      color: v.$color-success;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  padding: 12px 18px;
+  border-radius: v.$radius-md;
+  background-color: v.$color-white;
+  border: 1px dashed v.$color-primary-soft;
+  font-weight: 700;
+  color: v.$color-dark;
+  font-size: 0.95rem;
+
+  svg {
+    color: v.$color-primary;
+    flex: 0 0 auto;
+  }
+}
+
+.priceNote {
+  margin: 0;
+  font-size: 0.9rem;
+  color: v.$color-muted;
+}
+
+.visual {
+  @include m.from-lg {
+    padding-left: 10px;
+  }
+}
